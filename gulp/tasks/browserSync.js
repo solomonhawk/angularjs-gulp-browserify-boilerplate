@@ -1,6 +1,6 @@
 var config      = require('../config.json');
 var browserSync = require('browser-sync');
-var gulp = require('gulp');
+var gulp        = require('gulp');
 
 gulp.task('browserSync', function() {
   browserSync({

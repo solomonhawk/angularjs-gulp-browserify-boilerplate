@@ -23,7 +23,7 @@
     "root": "build"
   },
   "browserify": {
-    "entries"   : [ "./app/javascripts/main.js" ],
+    "entries"   : ["./app/javascripts/main.js"],
     "bundleName": "main.js"
   }
 }
