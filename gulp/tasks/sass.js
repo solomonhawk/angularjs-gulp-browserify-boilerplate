@@ -1,6 +1,6 @@
 var config       = require('../config.json');
 var gulp         = require('gulp');
-var sass         = require('gulp-ruby-sass');
+var sass         = require('gulp-sass');
 var gulpIf       = require('gulp-if');
 var handleErrors = require('../util/handleErrors');
 var browserSync  = require('browser-sync');

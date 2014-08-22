@@ -1,10 +1,9 @@
+var config      = require('../config.json');
 var browserSync = require('browser-sync');
-var gulp        = require('gulp');
-
-var proxy = 'localhost:' + (config.serverport + 1);
+var gulp = require('gulp');
 
 gulp.task('browserSync', function() {
   browserSync({
-    proxy: proxy
+    proxy: 'localhost:' + config.serverport
   });
 });

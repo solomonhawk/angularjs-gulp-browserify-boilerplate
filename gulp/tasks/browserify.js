@@ -12,11 +12,10 @@ var bundleLogger = require('../util/bundleLogger');
 var config       = require('../config.json');
 var gulp         = require('gulp');
 var handleErrors = require('../util/handleErrors');
-var ngAnnotate   = require('gulp-ng-annotate');
 var source       = require('vinyl-source-stream');
 var watchify     = require('watchify');
 
-gulp.task('browserify', function() {
+gulp.task('browserify', ['lint', 'views'], function() {
   var bundleMethod = global.devMode ? watchify : browserify;
 
   var bundler = bundleMethod({
@@ -31,8 +30,7 @@ gulp.task('browserify', function() {
     return bundler.bundle({ debug: !!global.devMode })
       .on('error', handleErrors)
       .pipe(source(config.browserify.bundleName))
-      .pipe(ngAnnotate())
-      .pipe(gulp.dest(config.dist.root + '/js'))
+      .pipe(gulp.dest(config.scripts.dest))
       .on('end', function() {
         bundleLogger.end()
       });

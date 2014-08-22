@@ -3,5 +3,5 @@ var runSequence = require('run-sequence');
 
 gulp.task('default', function(cb) {
 	global.devMode = true
-	runSequence('clean', ['sass', 'views'], 'browserify', 'watch', 'server', cb);
+	runSequence('clean', ['sass', 'views'], 'browserify', 'watch', cb);
 });
