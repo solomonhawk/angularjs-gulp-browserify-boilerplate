@@ -1,29 +1,29 @@
 {
   "serverport": 3000,
   "sass": {
-    "src" : "./app/sass/**/*.scss",
-    "dest": "./build/css"
+    "src" : "app/sass/**/*.scss",
+    "dest": "build/assets"
   },
   "scripts": {
-    "src" : "./app/javascripts/**/*.js",
-    "dest": "./build/js"
+    "src" : "app/javascripts/**/*.js",
+    "dest": "build/assets"
   },
   "images": {
-    "src" : "./app/images/**",
-    "dest": "./build/images"
+    "src" : "app/images/**",
+    "dest": "build/assets"
   },
   "views": {
     "src": [
-      "./app/index.html",
-      "./app/views/**/*.html"
+      "app/index.html",
+      "app/views/**/*.html"
     ],
-    "dest": "./app/js"
+    "dest": "app/javascripts"
   },
   "dist": {
-    "root": "./build"
+    "root": "build"
   },
   "browserify": {
-    "entries"   : [ "/app/js/main.js" ],
+    "entries"   : [ "./app/javascripts/main.js" ],
     "bundleName": "main.js"
   }
 }
