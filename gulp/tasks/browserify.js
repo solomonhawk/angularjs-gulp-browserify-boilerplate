@@ -15,7 +15,7 @@ var handleErrors = require('../util/handleErrors');
 var source       = require('vinyl-source-stream');
 var watchify     = require('watchify');
 
-gulp.task('browserify', ['lint', 'views'], function() {
+gulp.task('browserify', ['views'], function() {
   var bundleMethod = global.devMode ? watchify : browserify;
 
   var bundler = bundleMethod({
