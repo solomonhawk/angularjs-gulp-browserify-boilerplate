@@ -1,13 +1,19 @@
-html, body {
-  height: 100%;
-  width: 100%;
-  font-family: sans-serif;
-}
+// list all your imports here
+@import "breakpoint";
+@import "compass";
+@import "compass/reset";
 
-p {
-  font-size: 18px;
-}
+// config
+@import "config/variables";
+@import "config/breakpoints";
+@import "config/grid";
 
-.fancy-number {
-  font-weight: bold;
-}
+// base
+@import "base/layout";
+@import "base/typography";
+
+// components
+@import "components/component";
+
+// pages
+@import "pages/home";
