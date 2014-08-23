@@ -1,0 +1,35 @@
+$breakpoint--mobile-only: max-width 699px;
+$breakpoint--medium     : min-width 700px;
+$breakpoint--large      : min-width 960px;
+$breakpoint--max        : min-width 1301px;
+$breakpoint--retina     : min-resolution 1.5dppx;
+
+@mixin breakpoint--mobile-only {
+  @include breakpoint($breakpoint--mobile-only) {
+    @content;
+  }
+}
+
+@mixin breakpoint--medium {
+  @include breakpoint($breakpoint--medium) {
+    @content;
+  }
+}
+
+@mixin breakpoint--large {
+  @include breakpoint($breakpoint--large) {
+    @content;
+  }
+}
+
+@mixin breakpoint--max {
+  @include breakpoint($breakpoint--max) {
+    @content;
+  }
+}
+
+@mixin breakpoint--retina {
+  @include breakpoint($breakpoint--retina) {
+    @content;
+  }
+}
