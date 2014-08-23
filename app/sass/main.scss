@@ -1,25 +1,21 @@
+// list all your imports here
 @import "breakpoint";
 @import "compass";
 @import "compass/reset";
 
-// breakpoints
-$breakpoint--mobile-only: max-width 699px;
-$breakpoint--medium     : min-width 700px;
-$breakpoint--large      : min-width 960px;
-$breakpoint--max        : min-width 1301px;
-$breakpoint--retina     : min-resolution 1.5dppx;
+// config
+@import "config/variables";
+@import "config/breakpoints";
+@import "config/grid";
 
-// defaults
-$font-color--dark  : #333;
-$font-color--light : #fff;
-$background--light : #eee;
-$background--dark  : #222;
+// base
+@import "base/layout";
+@import "base/typography";
 
-// colors
-$blue  : #1f8de2;
-$green : #1fe27b;
-$red   : #e21f3f;
+// components
+@import "components/component";
 
+<<<<<<< Updated upstream
 // base unit
 $base        : 24px;
 $base--half  : $base / 2;
@@ -89,3 +85,7 @@ h2 {
 h3 {
   @extend .heading.-small;
 }
+=======
+// pages
+@import "pages/home";
+>>>>>>> Stashed changes

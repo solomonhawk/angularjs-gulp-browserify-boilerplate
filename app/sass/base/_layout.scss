@@ -1,0 +1,52 @@
+$inner-container-width: 1300;
+$max-container-width: 1600px;
+$padding-sm : percentage(100/$inner-container-width);
+$padding-md : percentage(60/$inner-container-width);
+$padding-lg : percentage(30/$inner-container-width);
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+body {
+  padding: $base;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+.container {
+  margin: auto;
+  max-width: $max-container-width;
+  padding: 0 $padding-md;
+  position: relative;
+
+  @include breakpoint--large {
+    padding: 0 $padding-lg;
+  }
+
+  &.-no-max {
+    max-width: none;
+  }
+
+  &.-no-padding {
+    padding: 0;
+  }
+
+  &.-no-padding-mobile {
+    @include breakpoint--mobile-only {
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+// Configuration
+$columns  : 12;
+$gutters  : 32;
+$maxWidth : 1024;
+
+// Calcualtions
+$paddingWidth   : $gutters / 2;
+$gridPadding    : percentage($paddingWidth / $maxWidth);
+$inversePadding : $gridPadding * -1;
+
+@mixin grid($outerGutter: false) {
+  @include pie-clearfix;
+  padding: $gridPadding 0 0 0;
+  @if $outerGutter != true {
+    margin: 0 $inversePadding 0 $inversePadding;
+  }
+}
+
+@mixin span($span, $bottomMargin: true) {
+  @include pie-clearfix;
+  float: left;
+  margin-top: $gridPadding * -2;
+  padding: $gridPadding;
+  position: relative;
+  width: percentage($span/$columns);
+  @if $bottomMargin == true {
+    margin-bottom: $gridPadding * 2;
+  }
+}
+
+.grid {
+  @include grid;
+
+  .span-3 {
+    @include span(3);
+  }
+
+  .span-4{
+    @include span(4);
+  }
+
+  .span-6 {
+    @include span(6);
+   }
+}
